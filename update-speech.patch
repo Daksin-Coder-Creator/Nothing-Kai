@@ -1,0 +1,58 @@
+--- src/components/MessageItem.tsx
++++ src/components/MessageItem.tsx
+@@ -77,6 +77,10 @@
+       if ('speechSynthesis' in window) {
+         window.speechSynthesis.cancel();
+       }
++      if (audioRef.current) {
++        audioRef.current.pause();
++        audioRef.current = null;
++      }
+     };
+   }, []);
+ 
+@@ -185,20 +189,33 @@
+   };
+ 
+-  const handleToggleSpeech = () => {
+-    if (!('speechSynthesis' in window)) {
+-      alert('Text-to-speech is not supported in your browser.');
+-      return;
+-    }
++  const handleToggleSpeech = async () => {
+     if (isSpeaking) {
+       window.speechSynthesis.cancel();
++      if (audioRef.current) {
++        audioRef.current.pause();
++        audioRef.current = null;
++      }
+       setIsSpeaking(false);
+     } else {
+-      window.speechSynthesis.cancel();
+       const textToSpeak = message.content.replace(/```[\s\S]*?```/g, ' code block snippet ');
+-      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+-      utterance.onend = () => setIsSpeaking(false);
+-      utterance.onerror = () => setIsSpeaking(false);
+       setIsSpeaking(true);
+-      window.speechSynthesis.speak(utterance);
++      
++      if (localStorage.getItem('Nothing-Ai_elevenlabs_key')) {
++        const audio = await playElevenLabsTTS(textToSpeak, () => setIsSpeaking(false));
++        if (audio) {
++          audioRef.current = audio;
++          return;
++        }
++      }
++      
++      if ('speechSynthesis' in window) {
++        window.speechSynthesis.cancel();
++        const utterance = new SpeechSynthesisUtterance(textToSpeak);
++        utterance.onend = () => setIsSpeaking(false);
++        utterance.onerror = () => setIsSpeaking(false);
++        window.speechSynthesis.speak(utterance);
++      } else {
++        setIsSpeaking(false);
++        alert('Text-to-speech is not supported in your browser.');
++      }
+     }
+   };

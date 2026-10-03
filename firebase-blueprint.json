@@ -1,0 +1,81 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information and purchased subscription plan",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "planId": { "type": "string" },
+        "tierId": { "type": "string" },
+        "purchasedPlan": { "type": "string" },
+        "monthlyCredits": { "type": "number" },
+        "usedCredits": { "type": "number" },
+        "purchasedAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "Chat conversation metadata",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "personaId": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "folderId": { "type": "string" },
+        "archived": { "type": "boolean" },
+        "pinned": { "type": "boolean" }
+      },
+      "required": ["id", "userId", "title"]
+    },
+    "Folder": {
+      "title": "Folder",
+      "description": "User conversation folder",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "name", "createdAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Chat message",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "assistant"] },
+        "content": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "personaId": { "type": "string" }
+      },
+      "required": ["id", "role", "content", "timestamp"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": { "$ref": "User" },
+      "description": "User profile collection"
+    },
+    "users/{userId}/conversations/{convId}": {
+      "schema": { "$ref": "Conversation" },
+      "description": "User conversations"
+    },
+    "users/{userId}/folders/{folderId}": {
+      "schema": { "$ref": "Folder" },
+      "description": "User custom folders"
+    },
+    "users/{userId}/conversations/{convId}/messages/{msgId}": {
+      "schema": { "$ref": "Message" },
+      "description": "Conversation messages"
+    }
+  }
+}

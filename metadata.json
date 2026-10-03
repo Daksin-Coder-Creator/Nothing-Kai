@@ -1,0 +1,10 @@
+{
+  "name": "Qunt X",
+  "description": "Premium AI Model Marketplace & Productivity Chat App powered by Nothing engine. Access Gemini, Claude, Grok, GPT, DeepSeek with 8 subscription tiers.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

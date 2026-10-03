@@ -1,0 +1,163 @@
+{
+  "currency": "INR",
+  "billing_period": "monthly",
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Standard",
+      "description": "Versatile standard casual intelligence",
+      "price_inr": 0,
+      "models": [
+        { "id": "gemini-2.0-flash", "display_name": "Gemini 2.0 Flash", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Fastest multimodal model", "max_context_tokens": 1000000, "speed": "fast", "default": true },
+        { "id": "gpt-4o", "display_name": "GPT-4o", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Omni model for text/audio/vision", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "claude-3.7-sonnet", "display_name": "Claude 3.7 Sonnet", "provider": "claude", "provider_name": "Claude", "purpose": "Balanced speed and intelligence", "max_context_tokens": 200000, "speed": "balanced" },
+        { "id": "llama-3.3", "display_name": "Llama 3.3", "provider": "meta", "provider_name": "Meta Llama", "purpose": "Open source powerhouse", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "sonar", "display_name": "Sonar", "provider": "perplexity", "provider_name": "Perplexity", "purpose": "Live web search & research", "max_context_tokens": 32000, "speed": "balanced" },
+        { "id": "grok-2", "display_name": "Grok 2", "provider": "grok", "provider_name": "Grok / xAI", "purpose": "Unfiltered intelligence", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "deepseek-v3-std", "display_name": "DeepSeek-V3", "provider": "deepseek", "provider_name": "DeepSeek", "purpose": "Strong open reasoning", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "mistral-medium", "display_name": "Mistral Medium", "provider": "mistral", "provider_name": "Mistral", "purpose": "Reliable standard model", "max_context_tokens": 32000, "speed": "balanced" },
+        { "id": "gpt-4.1", "display_name": "GPT-4.1", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Legacy peak intelligence", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "claude-sonnet-4", "display_name": "Claude Sonnet 4", "provider": "claude", "provider_name": "Claude", "purpose": "Next-gen balanced model", "max_context_tokens": 256000, "speed": "balanced" },
+        { "id": "microsoft-copilot", "display_name": "Microsoft Copilot", "provider": "copilot", "provider_name": "Microsoft Copilot", "purpose": "Productivity engine", "max_context_tokens": 32000, "speed": "balanced" }
+      ]
+    },
+    {
+      "id": "nano",
+      "name": "Nano",
+      "description": "Lightweight models for instant daily queries",
+      "price_inr": 99,
+      "models": [
+        { "id": "gemini-nano", "display_name": "Gemini Nano", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "On-device tasks", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "llama-scout", "display_name": "Llama 4 Scout", "provider": "meta", "provider_name": "Meta Llama", "purpose": "Fast edge computing", "max_context_tokens": 16000, "speed": "fast" },
+        { "id": "mistral-nemo", "display_name": "Mistral Nemo", "provider": "mistral", "provider_name": "Mistral", "purpose": "Efficient small model", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "qwen-turbo", "display_name": "Qwen Turbo", "provider": "qwen", "provider_name": "Qwen", "purpose": "High-speed queries", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "gemma", "display_name": "Gemma", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Open weights research", "max_context_tokens": 8000, "speed": "fast" },
+        { "id": "nemotron-nano", "display_name": "Nemotron Nano", "provider": "science", "provider_name": "NVIDIA", "purpose": "Small but capable", "max_context_tokens": 16000, "speed": "fast" },
+        { "id": "ministral", "display_name": "Ministral", "provider": "mistral", "provider_name": "Mistral", "purpose": "Ultra-efficient", "max_context_tokens": 16000, "speed": "fast" }
+      ]
+    },
+    {
+      "id": "lite",
+      "name": "Lite",
+      "description": "Balanced efficiency for regular tasks",
+      "price_inr": 199,
+      "models": [
+        { "id": "gpt-4o-mini", "display_name": "GPT-4o Mini", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Fast, affordable intelligence", "max_context_tokens": 128000, "speed": "fast" },
+        { "id": "claude-3.5-haiku", "display_name": "Claude 3.5 Haiku", "provider": "claude", "provider_name": "Claude", "purpose": "Fastest Claude model", "max_context_tokens": 200000, "speed": "fast" },
+        { "id": "gemini-2.0-flash-lite", "display_name": "Gemini 2.0 Flash-Lite", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Optimized flash speed", "max_context_tokens": 1000000, "speed": "fast" },
+        { "id": "o4-mini", "display_name": "o4-mini", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Next-gen compact reasoning", "max_context_tokens": 128000, "speed": "fast" },
+        { "id": "deepseek-r1-distill", "display_name": "DeepSeek-R1 Distill", "provider": "deepseek", "provider_name": "DeepSeek", "purpose": "Distilled reasoning", "max_context_tokens": 64000, "speed": "fast" },
+        { "id": "mistral-small", "display_name": "Mistral Small", "provider": "mistral", "provider_name": "Mistral", "purpose": "Efficient and reliable", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "qwen-2.5-lite", "display_name": "Qwen 2.5", "provider": "qwen", "provider_name": "Qwen", "purpose": "Versatile open model", "max_context_tokens": 64000, "speed": "fast" },
+        { "id": "llama-2", "display_name": "Llama 2", "provider": "meta", "provider_name": "Meta Llama", "purpose": "Legacy stability", "max_context_tokens": 4000, "speed": "balanced" },
+        { "id": "claude-haiku-4.5", "display_name": "Claude Haiku 4.5", "provider": "claude", "provider_name": "Claude", "purpose": "Future-gen efficiency", "max_context_tokens": 256000, "speed": "fast" },
+        { "id": "perplexity-search", "display_name": "Perplexity Search", "provider": "perplexity", "provider_name": "Perplexity", "purpose": "Standard search", "max_context_tokens": 16000, "speed": "fast" }
+      ]
+    },
+    {
+      "id": "student",
+      "name": "Student",
+      "description": "Dedicated study and coding workspace",
+      "price_inr": 299,
+      "models": [
+        { "id": "gpt-5", "display_name": "GPT-5", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Baseline GPT-5", "max_context_tokens": 256000, "speed": "balanced" },
+        { "id": "claude-3-5-sonnet", "display_name": "Claude 3.5 Sonnet", "provider": "claude", "provider_name": "Claude", "purpose": "Student helper Sonnet", "max_context_tokens": 200000, "speed": "balanced" },
+        { "id": "gemini-3-1-flash", "display_name": "Gemini 3.1 Flash", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "3.1 Flash vision", "max_context_tokens": 1000000, "speed": "fast" },
+        { "id": "deepseek-v3", "display_name": "DeepSeek V3", "provider": "deepseek", "provider_name": "DeepSeek", "purpose": "DeepSeek V3 reasoning", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "qwen-coder", "display_name": "Qwen Coder", "provider": "qwen", "provider_name": "Qwen", "purpose": "Qwen Coder model", "max_context_tokens": 64000, "speed": "fast" },
+        { "id": "dall-e-3", "display_name": "DALL-E 3", "provider": "image", "provider_name": "Image models", "purpose": "DALL-E 3 creative", "max_context_tokens": 4000, "speed": "fast" },
+        { "id": "midjourney-v5-2", "display_name": "Midjourney v5.2", "provider": "image", "provider_name": "Image models", "purpose": "MJ V5.2 style", "max_context_tokens": 4000, "speed": "balanced" },
+        { "id": "runway-gen-3", "display_name": "Runway Gen-3", "provider": "video", "provider_name": "Video models", "purpose": "Gen-3 video", "max_context_tokens": 8000, "speed": "balanced" },
+        { "id": "eleven-v3", "display_name": "Eleven v3", "provider": "voice", "provider_name": "Voice and music models", "purpose": "Eleven v3 natural voice", "max_context_tokens": 16000, "speed": "fast" },
+        { "id": "suno-v4", "display_name": "Suno v4", "provider": "voice", "provider_name": "Voice and music models", "purpose": "Suno V4 music", "max_context_tokens": 16000, "speed": "balanced" }
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "description": "Deep reasoning power for complex tasks",
+      "price_inr": 999,
+      "models": [
+        { "id": "claude-4-opus", "display_name": "Claude 4 Opus", "provider": "claude", "provider_name": "Claude", "purpose": "Peak reasoning & creativity", "max_context_tokens": 200000, "speed": "deep" },
+        { "id": "gemini-2.5-pro", "display_name": "Gemini 2.5 Pro", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Deep reasoning with 2M context", "max_context_tokens": 2000000, "speed": "deep" },
+        { "id": "deepseek-r1-pro", "display_name": "DeepSeek-R1", "provider": "deepseek", "provider_name": "DeepSeek", "purpose": "Open source reasoning king", "max_context_tokens": 128000, "speed": "deep" },
+        { "id": "llama-4-maverick", "display_name": "Llama 4 Maverick", "provider": "meta", "provider_name": "Meta Llama", "purpose": "Highly creative open model", "max_context_tokens": 256000, "speed": "deep" },
+        { "id": "grok-3", "display_name": "Grok 3", "provider": "grok", "provider_name": "Grok / xAI", "purpose": "Real-time unfiltered intelligence", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "sonar-pro", "display_name": "Sonar Pro", "provider": "perplexity", "provider_name": "Perplexity", "purpose": "Advanced search & citations", "max_context_tokens": 64000, "speed": "balanced" },
+        { "id": "mistral-large", "display_name": "Mistral Large", "provider": "mistral", "provider_name": "Mistral", "purpose": "Enterprise-grade logic", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "gpt-5.2", "display_name": "GPT-5.2", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Advanced general logic", "max_context_tokens": 512000, "speed": "balanced" },
+        { "id": "copilot-pro", "display_name": "Copilot Pro", "provider": "copilot", "provider_name": "Microsoft Copilot", "purpose": "Pro productivity", "max_context_tokens": 64000, "speed": "balanced" }
+      ]
+    },
+    {
+      "id": "max",
+      "name": "Max",
+      "description": "Apex performance for massive datasets",
+      "price_inr": 1499,
+      "models": [
+        { "id": "gpt-5.3-instant", "display_name": "GPT-5.3 Instant", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Instant high-tier reasoning", "max_context_tokens": 512000, "speed": "fast" },
+        { "id": "claude-4.6-opus", "display_name": "Claude Opus 4.6", "provider": "claude", "provider_name": "Claude", "purpose": "Supreme analytical engine", "max_context_tokens": 400000, "speed": "deep" },
+        { "id": "gemini-3.1-pro", "display_name": "Gemini 3.1 Pro", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Future-gen reasoning & agents", "max_context_tokens": 5000000, "speed": "deep" },
+        { "id": "llama-4-behemoth", "display_name": "Llama 4 Behemoth", "provider": "meta", "provider_name": "Meta Llama", "purpose": "Massive scale open intelligence", "max_context_tokens": 512000, "speed": "deep" },
+        { "id": "grok-4", "display_name": "Grok 4", "provider": "grok", "provider_name": "Grok / xAI", "purpose": "Ultimate real-time reasoning", "max_context_tokens": 256000, "speed": "deep" },
+        { "id": "sonar-reasoning-pro", "display_name": "Sonar Reasoning Pro", "provider": "perplexity", "provider_name": "Perplexity", "purpose": "Deep research & CoT", "max_context_tokens": 128000, "speed": "deep" },
+        { "id": "qwen-3", "display_name": "Qwen 3", "provider": "qwen", "provider_name": "Qwen", "purpose": "Future-gen Chinese intelligence", "max_context_tokens": 512000, "speed": "deep" },
+        { "id": "gpt-5.4", "display_name": "GPT-5.4", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Extreme general depth", "max_context_tokens": 1000000, "speed": "deep" },
+        { "id": "claude-sonnet-4.6", "display_name": "Claude Sonnet 4.6", "provider": "claude", "provider_name": "Claude", "purpose": "Max balanced performance", "max_context_tokens": 512000, "speed": "balanced" },
+        { "id": "grok-4-fast", "display_name": "Grok 4 Fast", "provider": "grok", "provider_name": "Grok / xAI", "purpose": "High-speed apex logic", "max_context_tokens": 256000, "speed": "fast" }
+      ]
+    },
+    {
+      "id": "expert",
+      "name": "Expert",
+      "description": "Specialized models for niche domains",
+      "price_inr": 2499,
+      "models": [
+        { "id": "alphafold-3", "display_name": "AlphaFold 3", "provider": "science", "provider_name": "Science and enterprise models", "purpose": "Protein structure prediction", "max_context_tokens": 64000, "speed": "deep" },
+        { "id": "github-copilot-agent", "display_name": "Copilot coding agent", "provider": "coding", "provider_name": "Coding models and tools", "purpose": "Autonomous coding", "max_context_tokens": 128000, "speed": "balanced" },
+        { "id": "cursor-auto", "display_name": "Cursor Auto", "provider": "coding", "provider_name": "Coding models and tools", "purpose": "IDE native intelligence", "max_context_tokens": 128000, "speed": "fast" },
+        { "id": "midjourney-v7", "display_name": "Midjourney V7", "provider": "image", "provider_name": "Image models", "purpose": "Apex photorealism", "max_context_tokens": 4000, "speed": "balanced" },
+        { "id": "dalle-3-exp", "display_name": "DALL·E 3 Expert", "provider": "image", "provider_name": "Image models", "purpose": "Creative prompt execution", "max_context_tokens": 4000, "speed": "fast" },
+        { "id": "runway-gen-4", "display_name": "Gen-4", "provider": "video", "provider_name": "Video models", "purpose": "Cinematic video generation", "max_context_tokens": 8000, "speed": "deep" },
+        { "id": "suno-v5", "display_name": "Suno V5", "provider": "voice", "provider_name": "Voice and music models", "purpose": "Apex music synthesis", "max_context_tokens": 16000, "speed": "balanced" },
+        { "id": "eleven-v3-exp", "display_name": "Eleven v3 Expert", "provider": "voice", "provider_name": "Voice and music models", "purpose": "Perfect human voice", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "codestral", "display_name": "Codestral", "provider": "mistral", "provider_name": "Mistral", "purpose": "Specialized coding", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "deepseek-coder", "display_name": "DeepSeek-Coder", "provider": "deepseek", "provider_name": "DeepSeek", "purpose": "Deep coding reasoning", "max_context_tokens": 64000, "speed": "balanced" },
+        { "id": "openai-codex", "display_name": "OpenAI Codex", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Original code engine", "max_context_tokens": 16000, "speed": "fast" },
+        { "id": "stable-diffusion-3.5-large", "display_name": "Stable Diffusion 3.5 Large", "provider": "image", "provider_name": "Image models", "purpose": "High-res open generation", "max_context_tokens": 4000, "speed": "balanced" },
+        { "id": "alphafold-multimer", "display_name": "AlphaFold-Multimer", "provider": "science", "provider_name": "Science and enterprise models", "purpose": "Protein complexes", "max_context_tokens": 64000, "speed": "deep" },
+        { "id": "ibm-granite-code", "display_name": "Granite Code", "provider": "science", "provider_name": "Science and enterprise models", "purpose": "Enterprise coding", "max_context_tokens": 32000, "speed": "balanced" },
+        { "id": "nemotron-ultra", "display_name": "Nemotron Ultra", "provider": "science", "provider_name": "Science and enterprise models", "purpose": "Apex enterprise logic", "max_context_tokens": 128000, "speed": "deep" }
+      ]
+    },
+    {
+      "id": "ultra",
+      "name": "Ultra",
+      "description": "Apex agentic engines",
+      "price_inr": 3999,
+      "models": [
+        { "id": "gpt-5.6", "display_name": "GPT-5.6", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "The absolute peak of AI", "max_context_tokens": 10000000, "speed": "deep" },
+        { "id": "claude-4.8-opus", "display_name": "Claude Opus 4.8", "provider": "claude", "provider_name": "Claude", "purpose": "Unrivaled cognitive depth", "max_context_tokens": 1000000, "speed": "deep" },
+        { "id": "o3", "display_name": "o3", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "Highest reasoning efficiency", "max_context_tokens": 256000, "speed": "deep" },
+        { "id": "deep-research", "display_name": "Deep Research", "provider": "perplexity", "provider_name": "Perplexity", "purpose": "Ultimate research agent", "max_context_tokens": 1000000, "speed": "deep" },
+        { "id": "gemini-3.1-pro-image", "display_name": "Gemini 3.1 Pro Image", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Next-gen visual reasoning", "max_context_tokens": 1000000, "speed": "deep" },
+        { "id": "gpt-5.5", "display_name": "GPT-5.5", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "SOTA general reasoning", "max_context_tokens": 5000000, "speed": "deep" }
+      ]
+    },
+    {
+      "id": "prime",
+      "name": "Prime",
+      "description": "Enterprise clearances and dedicated VPC deployments",
+      "price_inr": 29999,
+      "models": [
+        { "id": "gpt-5-6-ent", "display_name": "GPT-5.6 Enterprise", "provider": "gpt", "provider_name": "ChatGPT / OpenAI", "purpose": "GPT-5.6 Enterprise", "max_context_tokens": 10000000, "speed": "deep" },
+        { "id": "claude-opus-4-8-ent", "display_name": "Claude Opus 4.8 Enterprise", "provider": "claude", "provider_name": "Claude", "purpose": "Claude Opus 4.8 Enterprise", "max_context_tokens": 1000000, "speed": "deep" },
+        { "id": "gemini-3-1-pro-ent", "display_name": "Gemini 3.1 Pro Enterprise", "provider": "gemini", "provider_name": "Google Gemini", "purpose": "Gemini 3.1 Pro Enterprise", "max_context_tokens": 5000000, "speed": "deep" },
+        { "id": "runway-gen-4-ent", "display_name": "Runway Gen-4 Enterprise", "provider": "video", "provider_name": "Video models", "purpose": "Runway Gen-4 Enterprise", "max_context_tokens": 16000, "speed": "deep" },
+        { "id": "sora-2-ent", "display_name": "Sora 2 Enterprise", "provider": "video", "provider_name": "Video models", "purpose": "Sora 2 Enterprise", "max_context_tokens": 16000, "speed": "deep" },
+        { "id": "eleven-ent", "display_name": "Eleven Enterprise", "provider": "voice", "provider_name": "Voice and music models", "purpose": "Eleven Enterprise Voice", "max_context_tokens": 32000, "speed": "fast" },
+        { "id": "alphafold-3-ent", "display_name": "AlphaFold 3 Enterprise", "provider": "science", "provider_name": "Science and enterprise models", "purpose": "AlphaFold 3 Enterprise", "max_context_tokens": 64000, "speed": "deep" }
+      ]
+    }
+  ]
+}
